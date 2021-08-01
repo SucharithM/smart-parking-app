@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "731395583302",
+    "project_id": "parking-app-6b18f",
+    "storage_bucket": "parking-app-6b18f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:731395583302:android:fdb57a8223fa2e94930947",
+        "android_client_info": {
+          "package_name": "com.rootzero.parkinator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "731395583302-t996244g20nbnucbdf7mblvdr92v4n9a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtUntAoHPKr5U8HGGbbGEA0sKRluQHbvk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "731395583302-t996244g20nbnucbdf7mblvdr92v4n9a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
