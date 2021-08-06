@@ -136,24 +136,25 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                                     public void onComplete(@NonNull @org.jetbrains.annotations.NotNull Task<Void> task) {
                                         if (task.isSuccessful()) {
                                             Toast.makeText(RegisterUser.this, "Registered Successfully", Toast.LENGTH_LONG).show();
-                                            progressBar.setVisibility(View.INVISIBLE);
+                                            startActivity(new Intent(RegisterUser.this, MainActivity.class));
+                                            progressBar.setVisibility(View.GONE);
                                         }
                                         // redirect to login layout
                                         else {
                                             Toast.makeText(RegisterUser.this, "Registration Failed", Toast.LENGTH_LONG).show();
-                                            progressBar.setVisibility(View.INVISIBLE);
+                                            progressBar.setVisibility(View.GONE);
                                         }
 
                                     }
                                 });
                             } else {
                                 Toast.makeText(RegisterUser.this, "Registration Failed", Toast.LENGTH_LONG).show();
-                                progressBar.setVisibility(View.INVISIBLE);
+                                progressBar.setVisibility(View.GONE);
                             }
                         }
                     });
         } catch(Exception e) {
-            Log.d("STATE", "registerUser called", e);
+            //Log.d("STATE", "registerUser called", e);
         }
 
     }
