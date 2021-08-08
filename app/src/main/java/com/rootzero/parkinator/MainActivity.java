@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -109,7 +108,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             if(user.isEmailVerified()){
                                 //redirect to user profile
                                 // The Below activity was added just for testing purpose, kindly redirect.
-                                startActivity(new Intent(MainActivity.this, testActivity.class));
+                                startActivity(new Intent(MainActivity.this, SearchSlotsActivity.class));
                             }else{
                                 user.sendEmailVerification();
                                 Toast.makeText(MainActivity.this,"Check Your Email To verify Your Account",Toast.LENGTH_LONG).show();
