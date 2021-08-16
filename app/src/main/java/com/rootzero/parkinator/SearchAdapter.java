@@ -4,7 +4,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -46,12 +48,35 @@ public class SearchAdapter extends FirebaseRecyclerAdapter<SlotModel, SearchAdap
     {
         CircleImageView img;
         TextView slotLocation,slotType,slotPrice;
+        RelativeLayout relativeLayout;
         public MyViewHolder(@NonNull @NotNull View itemView) {
             super(itemView);
+            relativeLayout = (RelativeLayout) itemView.findViewById(R.id.relativeLayout);
             img = (CircleImageView) itemView.findViewById(R.id.img1);
             slotLocation = (TextView)itemView.findViewById(R.id.slotLocation);
             slotType = (TextView)itemView.findViewById(R.id.slotType);
             slotPrice = (TextView)itemView.findViewById(R.id.slotPrice);
+
+            itemView.setClickable(true);
+            itemView.setFocusableInTouchMode(true);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    Toast.makeText(itemView.getContext(), "Booked", Toast.LENGTH_LONG).show();
+                }
+            });
+
+            relativeLayout.setOnClickListener(new View.OnClickListener(){
+
+                @Override
+                public void onClick(View v) {
+
+                    Toast.makeText(itemView.getContext(), "Booked", Toast.LENGTH_LONG).show();
+                }
+
+            });
 
         }
     }

@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterUser">
+    tools:context=".RegisterUser"
+    android:padding="20dp"
+    android:background="@color/blue">
 
     <TextView
         android:id="@+id/banner"
@@ -39,7 +41,7 @@
         android:id="@+id/editFullName"
         android:layout_width="380dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="40dp"
         android:ems="10"
         android:hint="Full Name"
         android:inputType="text"
